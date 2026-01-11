@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const path = require('path')  // Tarvitaan polkujen hallintaan
+const path = require('path')
 const app = express()
 
 app.use(cors())
@@ -10,7 +10,6 @@ let persons = [
   { id: 1, name: 'Matti Meikäläinen', number: '040-1234567' },
   { id: 2, name: 'Maija Mallikas', number: '050-7654321' }
 ]
-
 
 app.get('/api/persons', (req, res) => {
   res.json(persons)
@@ -38,4 +37,3 @@ const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })
-
